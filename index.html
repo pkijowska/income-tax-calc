@@ -5,12 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Income tax calculator</title>
+     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
 </head>
 <body>
-    <h1>Income tax calculator UK</h1>
-    <form>
-        <input id="income"></input>
-    </form>
+<div class="b-calculator__wrapper b-income-calculator">
+    <article class="b-calculator">
+      <section class="b-calculator__details">
+        <h3 class="b-calculator__section-title">
+          Your details
+        </h3>
+        <form action="" class="b-form b-calculator__form b-calculator__form--expand">
+          <div class="b-form__group">
+            <label for="income" class="b-form__label">
+              Annual income
+            </label>
+            <input id="income" class="b-form__control" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 0, 'digitsOptional': false, 'prefix': '$', 'placeholder': '0'">
+          </div>
+        </form>
+      </section>
+      <section class="b-calculator__results">
+        <h3 class="b-calculator__section-title">
+          Your results
+        </h3>
+        <div class="b-calculator__tally-group">
+          <div class="b-calculator__tally">
+            <h6 class="b-calculator__tally-label">Final balance</h6>
+            <div class="b-calculator__tally-value">
+              <span id="result-net-income">$33000</span>
+            </div>
+          </div>
+          <div class="b-calculator__tally">
+            <h6 class="b-calculator__tally-label">Tax on income</h6>
+            <div class="b-calculator__tally-value">
+              <span id="result-tax">3300</span>
+            </div>
+          </div>
+        </div>
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+        </figure>
+        <div class="b-calculator__summary">
+          <label class="b-calculator__summary-label">
+            Net income per week
+          </label>
+          <div class="b-calculator__summary-number">
+            <span id="result-net-income-per-week"></span>
+          </div>
+          <label class="b-calculator__summary-label">
+            Net income per month
+          </label>
+          <div class="b-calculator__summary-number">
+            <span id="result-net-income-per-month"></span>
+          </div>
+        </div>
+      </section>
+    </article>
+    <p><small>
+      These calculations provided are for basic income for a single taxpayer and are estimates only. The
+      calculations do not include rebates, loadings, levy or HECS-HELP payments. Calculations are for the 2020/2021
+      financial year.</small></p>
+  </div>
 </body>
 </html>
