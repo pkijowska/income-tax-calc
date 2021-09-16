@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Income tax calculator</title>
      <link rel="stylesheet" href="styles.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
     <script src="index.js"></script>
 </head>
 <body>
@@ -20,7 +22,7 @@
             <label for="income" class="b-form__label">
               Annual income
             </label>
-            <input id="income" class="b-form__control" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 0, 'digitsOptional': false, 'prefix': '$', 'placeholder': '0'">
+            <input id="income" class="b-form__control" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'autoGroup': true, 'digits': 0, 'digitsOptional': false, 'prefix': '£', 'placeholder': '0'">
           </div>
         </form>
       </section>
@@ -32,13 +34,19 @@
           <div class="b-calculator__tally">
             <h6 class="b-calculator__tally-label">Final balance</h6>
             <div class="b-calculator__tally-value">
-              <span id="result-net-income">$33000</span>
+              <span id="result-net-income">£0</span>
             </div>
           </div>
           <div class="b-calculator__tally">
             <h6 class="b-calculator__tally-label">Tax on income</h6>
             <div class="b-calculator__tally-value">
-              <span id="result-tax">3300</span>
+              <span id="result-tax">£0</span>
+            </div>
+          </div>
+          <div class="b-calculator__tally">
+            <h6 class="b-calculator__tally-label">Class 1 NI rate</h6>
+            <div class="b-calculator__tally-value">
+              <span id="result-ni">£0</span>
             </div>
           </div>
         </div>
